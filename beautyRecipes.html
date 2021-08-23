@@ -20,11 +20,11 @@
     <option value="tianyan">Tianyan Real</option>
     <option value="tianyanb">Tianyan Beta</option>
 </select>
-<h3>Insert Style ID</h3>
+<h3>* Style</h3>
 Style ID : <input type="number" id="styleId">
 <button id="style_id_set">set</button>
 <button id="style_id_unset">unset</button>
-<h3>Insert Filter ID</h3>
+<h3>* Filter</h3>
 Filter Id : <input type="number" id="filterId">
 <button id="filter_id_set">set</button>
 <button id="filter_id_unset">unset</button>
@@ -102,10 +102,10 @@ Filter Id : <input type="number" id="filterId">
 
 <button id="beauty_set">set</button>
 <button id="beauty_unset">unset</button>
-<h3>Scheme</h3>
+<h3>* Scheme</h3>
 <input id="main_url" readonly style="width: 1000px;">
 <br>
-<br>
+<h3>* QR Code</h3>
 <input type="button" id="addQrcode" value="Show QR Code">
 <input type="reset" id="reset" value="Reset">
 <br>
@@ -296,10 +296,15 @@ Filter Id : <input type="number" id="filterId">
     $("#addQrcode").click(function () {
         jQuery("#showQrCode").qrcode({
             render : "table",
-            width : 200,
-            height : 200,
+            width : 100,
+            height : 100,
             text : $("#main_url").val()
         });
+    })
+
+    //qrcode reset
+    $("#reset").click(function () {
+        $("#showQrCode").empty();
     })
 </script>
 </body>
