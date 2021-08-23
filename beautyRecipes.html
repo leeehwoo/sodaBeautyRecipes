@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="Pragma" content="no-cache">
     <meta charset="UTF-8">
     <title>Beauty Recipes</title>
@@ -9,303 +10,292 @@
     <script type="text/javascript" src="jquery.qrcode.js"></script>
     <script type="text/javascript" src="qrcode.js"></script>
 </head>
+
 <body>
-<h1>SODA/Tianyan v5.3.0</h1>
-<h2>Beauty Recipes Scheme Helper</h2>
-<br>
-<h3>* App Select</h3>
-<select name="app" id="appSelect">
-    <option value="soda">SODA Real</option>
-    <option value="sodab">SODA Beta</option>
-    <option value="tianyan">Tianyan Real</option>
-    <option value="tianyanb">Tianyan Beta</option>
-</select>
-<h3>* Style</h3>
-Style ID : <input type="number" id="styleId">
-<button id="style_id_set">set</button>
-<button id="style_id_unset">unset</button>
-<h3>* Filter</h3>
-Filter Id : <input type="number" id="filterId">
-<button id="filter_id_set">set</button>
-<button id="filter_id_unset">unset</button>
-<h3>* Face Shape</h3>
-<select name="faceShape" id="faceShapeSelect">
-    <option value="original">original</option>
-    <option value="natural">natural</option>
-    <option value="baby">baby</option>
-    <option value="slim">slim</option>
-    <option value="beauty">beauty</option>
-    <option value="basic">basic</option>
-    <option value="daily">daily</option>
-</select>
-<button id="face_shape_set">set</button>
-<button id="face_shape_unset">unset</button>
-/ Intensity : <input type="number" id="faceShapeIntensity">
-<button id="face_shape_intensity_set">set</button>
-<button id="face_shape_intensity_unset">unset</button>
-<h3>* Beauty</h3>
-<select name="Beauty(Keyname)" id="beautySelect">
-    <option value="bodyslim">bodyslim</option>
-    <option value="head">head</option>
-    <option value="smooth">smooth</option>
-    <option value="balance">balance</option>
-    <option value="clear">clear</option>
-    <option value="toneup">toneup</option>
-    <option value="enlarge">enlarge</option>
-    <option value="narrow">narrow</option>
-    <option value="wrinkle">wrinkle</option>
-    <option value="cheekbone">cheekbone</option>
-    <option value="slim">slim</option>
-    <option value="short">short</option>
-    <option value="brow">brow</option>
-    <option value="clarity">clarity</option>
-    <option value="eyebag">eyebag</option>
-    <option value="teeth">teeth</option>
-    <option value="lift">lift</option>
-    <option value="chin">chin</option>
-    <option value="jawbone">jawbone</option>
-    <option value="span">span</option>
-    <option value="alar">alar</option>
-    <option value="noselength">noselength</option>
-    <option value="temple">temple</option>
-    <option value="vshape">vshape</option>
-    <option value="position">position</option>
-    <option value="eyesize">eyesize</option>
-    <option value="eyewidth">eyewidth</option>
-    <option value="corner">corner</option>
-    <option value="pupil">pupil</option>
-    <option value="inner">inner</option>
-    <option value="eyelength">eyelength</option>
-    <option value="under">under</option>
-    <option value="eyetail">eyetail</option>
-    <option value="plim">plim</option>
-    <option value="nose">nose</option>
-    <option value="bridge">bridge</option>
-    <option value="radixnasi">radixnasi</option>
-    <option value="tip">tip</option>
-    <option value="mouth">mouth</option>
-    <option value="philtrum">philtrum</option>
-    <option value="lipwidth">lipwidth</option>
-    <option value="upperlip">upperlip</option>
-    <option value="lowerlip">lowerlip</option>
-    <option value="mlip">mlip</option>
-    <option value="smile">smile</option>
-    <option value="thick">thick</option>
-    <option value="eyebrowlift">eyebrowlift</option>
-    <option value="glabella">glabella</option>
-    <option value="eyebrow">eyebrow</option>
-    <option value="shape">shape</option>
-    <option value="front">front</option>
-    <option value="behind">behind</option>
-</select>
-/ Intensity : <input type="number" id="beautyIntensity">
+    <h1>SODA/Tianyan v5.3.0</h1>
+    <h2>Beauty Recipes Scheme Helper</h2>
+    <br>
+    <h3>* App Select</h3>
+    <select name="app" id="appSelect">
+        <option value="soda">SODA Real</option>
+        <option value="sodab">SODA Beta</option>
+        <option value="tianyan">Tianyan Real</option>
+        <option value="tianyanb">Tianyan Beta</option>
+    </select>
+    <h3>* Style</h3>
+    Style ID : <input type="number" id="styleId">
+    <button id="style_id_set">set</button>
+    <button id="style_id_unset">unset</button>
+    <h3>* Filter</h3>
+    Filter Id : <input type="number" id="filterId">
+    <button id="filter_id_set">set</button>
+    <button id="filter_id_unset">unset</button>
+    <h3>* Face Shape</h3>
+    <select name="faceShape" id="faceShapeSelect">
+        <option value="original">original</option>
+        <option value="natural">natural</option>
+        <option value="baby">baby</option>
+        <option value="slim">slim</option>
+        <option value="beauty">beauty</option>
+        <option value="basic">basic</option>
+        <option value="daily">daily</option>
+    </select>
+    <button id="face_shape_set">set</button>
+    <button id="face_shape_unset">unset</button>
+    / Intensity : <input type="number" id="faceShapeIntensity">
+    <button id="face_shape_intensity_set">set</button>
+    <button id="face_shape_intensity_unset">unset</button>
+    <h3>* Beauty</h3>
+    <select name="Beauty(Keyname)" id="beautySelect">
+        <option value="bodyslim">bodyslim</option>
+        <option value="head">head</option>
+        <option value="smooth">smooth</option>
+        <option value="balance">balance</option>
+        <option value="clear">clear</option>
+        <option value="toneup">toneup</option>
+        <option value="enlarge">enlarge</option>
+        <option value="narrow">narrow</option>
+        <option value="wrinkle">wrinkle</option>
+        <option value="cheekbone">cheekbone</option>
+        <option value="slim">slim</option>
+        <option value="short">short</option>
+        <option value="brow">brow</option>
+        <option value="clarity">clarity</option>
+        <option value="eyebag">eyebag</option>
+        <option value="teeth">teeth</option>
+        <option value="lift">lift</option>
+        <option value="chin">chin</option>
+        <option value="jawbone">jawbone</option>
+        <option value="span">span</option>
+        <option value="alar">alar</option>
+        <option value="noselength">noselength</option>
+        <option value="temple">temple</option>
+        <option value="vshape">vshape</option>
+        <option value="position">position</option>
+        <option value="eyesize">eyesize</option>
+        <option value="eyewidth">eyewidth</option>
+        <option value="corner">corner</option>
+        <option value="pupil">pupil</option>
+        <option value="inner">inner</option>
+        <option value="eyelength">eyelength</option>
+        <option value="under">under</option>
+        <option value="eyetail">eyetail</option>
+        <option value="plim">plim</option>
+        <option value="nose">nose</option>
+        <option value="bridge">bridge</option>
+        <option value="radixnasi">radixnasi</option>
+        <option value="tip">tip</option>
+        <option value="mouth">mouth</option>
+        <option value="philtrum">philtrum</option>
+        <option value="lipwidth">lipwidth</option>
+        <option value="upperlip">upperlip</option>
+        <option value="lowerlip">lowerlip</option>
+        <option value="mlip">mlip</option>
+        <option value="smile">smile</option>
+        <option value="thick">thick</option>
+        <option value="eyebrowlift">eyebrowlift</option>
+        <option value="glabella">glabella</option>
+        <option value="eyebrow">eyebrow</option>
+        <option value="shape">shape</option>
+        <option value="front">front</option>
+        <option value="behind">behind</option>
+    </select>
+    / Intensity : <input type="number" id="beautyIntensity">
 
-<button id="beauty_set">set</button>
-<button id="beauty_unset">unset</button>
-<h3>* Scheme</h3>
-<input id="main_url" readonly style="width: 1000px;">
-<br>
-<h3>* QR Code</h3>
-<input type="button" id="addQrcode" value="Show QR Code">
-<input type="reset" id="reset" value="Reset">
-<br>
-<br>
-<div id="showQrCode"></div>
+    <button id="beauty_set">set</button>
+    <button id="beauty_unset">unset</button>
+    <h3>* Scheme</h3>
+    <input id="main_url" readonly style="width: 1000px;">
+    <br>
+    <h3>* QR Code</h3>
+    <input type="button" id="addQrcode" value="Show QR Code">
+    <input type="reset" id="reset" value="Reset">
+    <br>
+    <br>
+    <div id="showQrCode"></div>
 
-<script>
-    const app_main = {
-        url: '',
-        style_filter: '',
-        face_shape: '',
-        face_shape_intensity: '',
-        beauty: [],
-        all_url: '',
-    }
-    $(function () {
-
-        app_main.url = $("#appSelect").val() + "://";
-
-        set_url();
-
-        $("#appSelect").change(function () {
-            app_main.url = $(this).val() + "://";
-
-            set_url();
-        })
-
-        $("#style_id_set").click(function () {
-
-
-            var s_i = $("#styleId").val();
-            if (s_i === '')
-            {
-                return false;
-            }
-            app_main.style_filter = 'styleId=' + s_i;
-            set_url();
-
-        });
-        $("#filter_id_set").click(function () {
-
-            var s_i = $("#filterId").val();
-            if (s_i === '')
-            {
-                return false;
-            }
-            app_main.style_filter = 'filterId=' + s_i;
-            set_url();
-
-
-        });
-        $("#style_id_unset, #filter_id_unset").click(function () {
-
-            app_main.style_filter = '';
-            set_url();
-
-        });
-
-
-        $("#faceShapeSelect").change(function () {
-            var fc = $(this).val();
-            app_main.face_shape = 'faceShape=' + fc;
-            set_url();
-        });
-        $("#face_shape_set").click(function () {
-            var fc = $("#faceShapeSelect").val();
-            app_main.face_shape = 'faceShape=' + fc;
-            set_url();
-        });
-        $("#face_shape_unset").click(function () {
-
-            app_main.face_shape = '';
-            set_url();
-        });
-        $("#face_shape_intensity_set").click(function () {
-            var fsi = $("#faceShapeIntensity").val();
-            if (fsi === '')
-            {
-                return false;
-            }
-            app_main.face_shape_intensity = 'faceShapeIntensity=' + fsi;
-            set_url();
-
-        });
-        $("#face_shape_intensity_unset").click(function () {
-
-            app_main.face_shape_intensity = '';
-            set_url();
-
-        });
-        $("#beauty_set").click(function () {
-            var bs = $("#beautySelect").val();
-            var bi = $("#beautyIntensity").val();
-            if (bi === '')
-            {
-                return false;
-            }
-            var ck = app_main.beauty.some(p => p.name === bs);
-            if (ck)
-            {
-                var i = app_main.beauty.findIndex(p => p.name === bs);
-                app_main.beauty[i].val = bi;
-            }
-            else
-            {
-                app_main.beauty.push({'name': bs, 'val': bi});
-            }
-
-            set_url();
-        });
-        $("#beauty_unset").click(function () {
-            var bs = $("#beautySelect").val();
-            for (var i = 0; i < app_main.beauty.length; i++) {
-                if (app_main.beauty[i].name === bs) {
-                    app_main.beauty.splice(i, 1);
-                }
-            }
-            set_url();
-
-
-        });
-        $("#main_url").click(function (){
-            var url = $(this).val();
-            window.open(url);
-        })
-
-    })
-
-    function set_url() {
-        const paras = [app_main.style_filter, app_main.face_shape, app_main.face_shape_intensity, app_main.beauty]
-        console.log(paras);
-        var all = app_main.url + "eventCamera?type=beautyRecipe";
-        var ck = false;
-        for (var i = 0; i < paras.length; i++) {
-            if (Array.isArray(paras[i])) {
-                if(paras[i].length === 0)
-                {
-
-                }
-                else
-                {
-
-                    if(ck){
-
-                        for(var j=0; j<paras[i].length; j++)
-                        {
-                             all+='&' + paras[i][j].name + '=' + paras[i][j].val;
-                        }
-                    }
-                    else
-                    {
-                        for(var j=0; j<paras[i].length; j++)
-                        {
-                            if(j===0)
-                            {
-                                all+='&' + paras[i][j].name + '=' + paras[i][j].val;
-                            }
-                            else
-                            {
-                                all+='&' + paras[i][j].name + '=' + paras[i][j].val;
-                            }
-
-                        }
-                        ck = true;
-                    }
-                }
-            } else {
-                if (paras[i] === '') {
-
-                } else {
-                    if (ck) {
-                        all += '&' + paras[i];
-                    } else {
-                        all += '&' + paras[i];
-                        ck = true;
-                    }
-
-
-                }
-            }
-
+    <script>
+        const app_main = {
+            url: '',
+            style_filter: '',
+            face_shape: '',
+            face_shape_intensity: '',
+            beauty: [],
+            all_url: '',
         }
-        $("#main_url").val(all);
-        app_main.all_url = all;
-    }
+        $(function () {
 
-    //qrcode 보기
-    $("#addQrcode").click(function () {
-        jQuery("#showQrCode").qrcode({
-            render : "table",
-            width : 100,
-            height : 100,
-            text : $("#main_url").val()
-        });
-    })
+            app_main.url = $("#appSelect").val() + "://";
 
-    //qrcode reset
-    $("#reset").click(function () {
-        $("#showQrCode").empty();
-    })
-</script>
+            set_url();
+
+            $("#appSelect").change(function () {
+                app_main.url = $(this).val() + "://";
+
+                set_url();
+            })
+
+            $("#style_id_set").click(function () {
+
+
+                var s_i = $("#styleId").val();
+                if (s_i === '') {
+                    return false;
+                }
+                app_main.style_filter = 'styleId=' + s_i;
+                set_url();
+
+            });
+            $("#filter_id_set").click(function () {
+
+                var s_i = $("#filterId").val();
+                if (s_i === '') {
+                    return false;
+                }
+                app_main.style_filter = 'filterId=' + s_i;
+                set_url();
+
+
+            });
+            $("#style_id_unset, #filter_id_unset").click(function () {
+
+                app_main.style_filter = '';
+                set_url();
+
+            });
+
+
+            $("#faceShapeSelect").change(function () {
+                var fc = $(this).val();
+                app_main.face_shape = 'faceShape=' + fc;
+                set_url();
+            });
+            $("#face_shape_set").click(function () {
+                var fc = $("#faceShapeSelect").val();
+                app_main.face_shape = 'faceShape=' + fc;
+                set_url();
+            });
+            $("#face_shape_unset").click(function () {
+
+                app_main.face_shape = '';
+                set_url();
+            });
+            $("#face_shape_intensity_set").click(function () {
+                var fsi = $("#faceShapeIntensity").val();
+                if (fsi === '') {
+                    return false;
+                }
+                app_main.face_shape_intensity = 'faceShapeIntensity=' + fsi;
+                set_url();
+
+            });
+            $("#face_shape_intensity_unset").click(function () {
+
+                app_main.face_shape_intensity = '';
+                set_url();
+
+            });
+            $("#beauty_set").click(function () {
+                var bs = $("#beautySelect").val();
+                var bi = $("#beautyIntensity").val();
+                if (bi === '') {
+                    return false;
+                }
+                var ck = app_main.beauty.some(p => p.name === bs);
+                if (ck) {
+                    var i = app_main.beauty.findIndex(p => p.name === bs);
+                    app_main.beauty[i].val = bi;
+                }
+                else {
+                    app_main.beauty.push({ 'name': bs, 'val': bi });
+                }
+
+                set_url();
+            });
+            $("#beauty_unset").click(function () {
+                var bs = $("#beautySelect").val();
+                for (var i = 0; i < app_main.beauty.length; i++) {
+                    if (app_main.beauty[i].name === bs) {
+                        app_main.beauty.splice(i, 1);
+                    }
+                }
+                set_url();
+
+
+            });
+            $("#main_url").click(function () {
+                var url = $(this).val();
+                window.open(url);
+            })
+
+        })
+
+        function set_url() {
+            const paras = [app_main.style_filter, app_main.face_shape, app_main.face_shape_intensity, app_main.beauty]
+            console.log(paras);
+            var all = app_main.url + "eventCamera?type=beautyRecipe";
+            var ck = false;
+            for (var i = 0; i < paras.length; i++) {
+                if (Array.isArray(paras[i])) {
+                    if (paras[i].length === 0) {
+
+                    }
+                    else {
+
+                        if (ck) {
+
+                            for (var j = 0; j < paras[i].length; j++) {
+                                all += '&' + paras[i][j].name + '=' + paras[i][j].val;
+                            }
+                        }
+                        else {
+                            for (var j = 0; j < paras[i].length; j++) {
+                                if (j === 0) {
+                                    all += '&' + paras[i][j].name + '=' + paras[i][j].val;
+                                }
+                                else {
+                                    all += '&' + paras[i][j].name + '=' + paras[i][j].val;
+                                }
+
+                            }
+                            ck = true;
+                        }
+                    }
+                } else {
+                    if (paras[i] === '') {
+
+                    } else {
+                        if (ck) {
+                            all += '&' + paras[i];
+                        } else {
+                            all += '&' + paras[i];
+                            ck = true;
+                        }
+
+
+                    }
+                }
+
+            }
+            $("#main_url").val(all);
+            app_main.all_url = all;
+        }
+
+        //qrcode 보기
+        $("#addQrcode").click(function () {
+            jQuery("#showQrCode").qrcode({
+                render: "table",
+                width: 100,
+                height: 100,
+                text: $("#main_url").val()
+            });
+        })
+
+        //qrcode reset
+        $("#reset").click(function () {
+            $("#showQrCode").empty();
+        })
+    </script>
 </body>
+
 </html>
