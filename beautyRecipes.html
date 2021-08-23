@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +6,8 @@
     <meta charset="UTF-8">
     <title>Beauty Recipes</title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="jquery.qrcode.js"></script>
+    <script type="text/javascript" src="qrcode.js"></script>
 </head>
 <body>
 <h1>SODA/Tianyan v5.3.0</h1>
@@ -109,7 +110,7 @@ Filter Id : <input type="number" id="filterId">
 <input type="reset" id="reset" value="Reset">
 <br>
 <br>
-QR Code 이미지 영역
+<div id="showQrCode"></div>
 
 <script>
     const app_main = {
@@ -290,6 +291,16 @@ QR Code 이미지 영역
         $("#main_url").val(all);
         app_main.all_url = all;
     }
+
+    //qrcode 보기
+    $("#addQrcode").click(function () {
+        jQuery("#showQrCode").qrcode({
+            render : "table",
+            width : 200,
+            height : 200,
+            text : $("#main_url").val()
+        });
+    })
 </script>
 </body>
 </html>
