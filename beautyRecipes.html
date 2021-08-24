@@ -157,11 +157,32 @@
 
 
             });
-            $("#style_id_unset, #filter_id_unset").click(function () {
 
-                app_main.style_filter = '';
+
+            $("#style_id_unset").click(function () {
+			if(app_main.style_filter.indexOf("styleId") !== -1) {
+				app_main.style_filter = '';
+				set_url();
+			}
+            });
+
+            $("#filter_id_set").click(function () {
+
+                var s_i = $("#filterId").val();
+                if (s_i === '')
+                {
+                    return false;
+                }
+                app_main.style_filter = 'filterId=' + s_i;
                 set_url();
 
+
+            });
+            $("#filter_id_unset").click(function () {
+			    if(app_main.style_filter.indexOf("filterId") !== -1) {
+				    app_main.style_filter = '';
+				    set_url();
+			    }
             });
 
 
