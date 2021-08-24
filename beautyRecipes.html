@@ -107,6 +107,8 @@
     <h3>* Scheme</h3>
     <input id="main_url" readonly style="width: 1000px;">
     <br>
+    <button id="schemeCopy">Scheme Copy</button>
+    <br>
     <h3>* QR Code</h3>
     <input type="button" id="addQrcode" value="Show QR Code">
     <input type="reset" id="reset" value="Reset">
@@ -316,6 +318,16 @@
         $("#reset").click(function () {
             $("#showQrCode").empty();
         })
+
+        //scheme copy
+        jQuery("#schemeCopy").click (
+            function() {
+                var urlInfo = document.getElementById("main_url");
+                urlInfo.select();
+                document.execCommand("Copy");
+                alert("Scheme Copy!")
+            }
+        )
     </script>
 </body>
 
