@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +10,11 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="jquery.qrcode.js"></script>
     <script type="text/javascript" src="qrcode.js"></script>
+	<style>
+		#showQrCode{position:relative;}
+		#ul_list{position:absolute;top:820px;left:100px;}
+		#ul_list li{height:100px;list-style:none;}
+	</style>
 </head>
 
 <body>
@@ -42,7 +48,7 @@
     </select>
     <button id="face_shape_set">set</button>
     <button id="face_shape_unset">unset</button>
-    / Intensity : <input type="number" id="faceShapeIntensity">
+    / Intensity : <input type="number" id="faceShapeIntensity" max='100'>
     <button id="face_shape_intensity_set">set</button>
     <button id="face_shape_intensity_unset">unset</button>
     <h3>* Beauty</h3>
@@ -100,7 +106,7 @@
         <option value="front">front</option>
         <option value="behind">behind</option>
     </select>
-    / Intensity : <input type="number" id="beautyIntensity">
+    / Intensity : <input type="number" id="beautyIntensity" max='100'>
 
     <button id="beauty_set">set</button>
     <button id="beauty_unset">unset</button>
@@ -110,11 +116,16 @@
     <button id="schemeCopy">Scheme Copy</button>
     <br>
     <h3>* QR Code</h3>
-    <input type="button" id="addQrcode" value="Show QR Code">
+    <input type="button" id="addQrcode" value="Show QR Code" onclick="action_add()">
     <input type="reset" id="reset" value="Reset">
     <br>
     <br>
     <div id="showQrCode"></div>
+		<ul id="ul_list">
+
+		<ul>
+
+
 
     <script>
         const app_main = {
@@ -311,12 +322,23 @@
                 width: 100,
                 height: 100,
                 text: $("#main_url").val()
+
             });
+
+			//$('#name').html($("#main_url").val());
+
         })
+
+		function action_add(){
+			var text_add = $("#main_url").val(); //입력할 글씨
+			var ul_list = $("#ul_list"); //ul_list선언
+			ul_list.append("<li>"+text_add+"</li>"); //ul_list안쪽에 li추가
+		}
 
         //qrcode reset
         $("#reset").click(function () {
             $("#showQrCode").empty();
+			$('#ul_list').empty();
         })
 
         //scheme copy
@@ -325,7 +347,7 @@
                 var urlInfo = document.getElementById("main_url");
                 urlInfo.select();
                 document.execCommand("Copy");
-                alert("Add scheme to clipboard!")
+                alert("Scheme Copy!")
             }
         )
     </script>
