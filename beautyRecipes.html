@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +13,7 @@
     <script type="text/javascript" src="qrcode.js"></script>
 	<style>
 		#showQrCode{position:relative;}
-		#ul_list{position:absolute;top:820px;left:100px;}
+		#ul_list{position:absolute;top:910px;left:100px;}
 		#ul_list li{height:100px;list-style:none;}
 	</style>
 </head>
@@ -36,6 +37,12 @@
     Filter Id : <input type="number" id="filterId">
     <button id="filter_id_set">set</button>
     <button id="filter_id_unset">unset</button>
+	<h3>* Camera Position</h3>
+	<input type="hidden" id="cp_f" value='0'>
+	<input type="hidden" id="cp_b" value='1'>
+    <button id="cp_front">Front</button>
+	<button id="cp_back">back</button>
+    <button id="cp_unset">unset</button>
     <h3>* Face Shape</h3>
     <select name="faceShape" id="faceShapeSelect">
         <option value="original">original</option>
@@ -131,6 +138,7 @@
         const app_main = {
             url: '',
             style_filter: '',
+			camera_position : '', //0826 추가
             face_shape: '',
             face_shape_intensity: '',
             beauty: [],
@@ -191,12 +199,33 @@
 
 
             });
+
             $("#filter_id_unset").click(function () {
 			    if(app_main.style_filter.indexOf("filterId") !== -1) {
 				    app_main.style_filter = '';
 				    set_url();
 			    }
             });
+
+			$("#cp_front").click(function () {
+                var cp = $("#cp_f").val();
+                app_main.camera_position = 'cameraPosition=' + cp;
+                set_url();
+            });
+
+			$("#cp_back").click(function () {
+                var cp = $("#cp_b").val();
+                app_main.camera_position = 'cameraPosition=' + cp;
+                set_url();
+            });
+
+			$("#cp_unset").click(function () {
+
+                app_main.camera_position = '';
+                set_url();
+            });
+
+
 
 
             $("#faceShapeSelect").change(function () {
@@ -265,9 +294,9 @@
         })
 
         function set_url() {
-            const paras = [app_main.style_filter, app_main.face_shape, app_main.face_shape_intensity, app_main.beauty]
+            const paras = [app_main.style_filter, app_main.camera_position, app_main.face_shape, app_main.face_shape_intensity, app_main.beauty]
             console.log(paras);
-            var all = app_main.url + "eventCamera?type=beautyRecipe";
+            var all = app_main.url + "eventWebCamera?type=beautyRecipe";
             var ck = false;
             for (var i = 0; i < paras.length; i++) {
                 if (Array.isArray(paras[i])) {
@@ -347,7 +376,7 @@
                 var urlInfo = document.getElementById("main_url");
                 urlInfo.select();
                 document.execCommand("Copy");
-                alert("Add scheme to clipboard!")
+                alert("Scheme Copy!")
             }
         )
     </script>
