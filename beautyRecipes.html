@@ -41,7 +41,7 @@
 	<input type="hidden" id="cp_f" value='0'>
 	<input type="hidden" id="cp_b" value='1'>
     <button id="cp_front">Front</button>
-	<button id="cp_back">back</button>
+	<button id="cp_back">Back</button>
     <button id="cp_unset">unset</button>
     <h3>* Face Shape</h3>
     <select name="faceShape" id="faceShapeSelect">
@@ -207,7 +207,7 @@
 			    }
             });
 
-			$("#cp_front").click(function () {
+			$("#cp_front").click(function () { // camera position 추
                 var cp = $("#cp_f").val();
                 app_main.camera_position = 'cameraPosition=' + cp;
                 set_url();
